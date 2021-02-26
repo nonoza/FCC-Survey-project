@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Natural Soap Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,100&display=swap');
+
+        label,
+        legend,
+        input,
+        select,
+        textarea,
+        input::placeholder,
+        button,
+        input[type="text"] {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+        }
+
+        .bg {
+            background: url(images/bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header.header-section {
+            text-align: center;
+        }
+
+        .logo {
+            margin: 0 auto;
+            width: 250px;
+        }
+
+        h1.heading {
+            position: relative;
+            bottom: 100px;
+        }
+
+        p.description {
+            position: relative;
+            bottom: 95px;
+        }
+
+        #survey-form {
+            right: -50px;
+            background-color: #fff;
+            width: 50%;
+            padding: 60px;
+            position: relative;
+            left: 300px;
+            border-radius: 20px;
+            opacity: 1.7;
+            height: 100%;
+        }
+
+
+        .form-group-item {
+            margin: 0 auto 1.25rem auto;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            height: 2.375rem;
+            padding: 0.375rem 0.75rem;
+            color: #000;
+            border: solid 1px #000;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        option:checked,
+        input[type="radio"]:checked {
+            color: #e0bb85;
+        }
+
+        select#dropdown {
+            display: block;
+            width: 100%;
+            height: 2.375rem;
+            padding: 0.375rem 0.75rem;
+            color: #000;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            height: 2.375rem;
+            padding: 0.375rem 0.75rem;
+            color: #000;
+            background-color: #e0bb85;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            color: #000;
+        }
+
+        textarea#comment {
+            display: block;
+            width: 96%;
+            height: 2.375rem;
+            padding: 0.375rem 0.75rem;
+            color: #000;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            min-height: 100px;
+            min-width: 100px;
+        }
+
+        fieldset {
+            display: inline-flex;
+            width: 550px;
+        }
+
+        .label-heading {
+            position: relative;
+            top: 12px;
+            font-size: 14px;
+        }
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+            #survey-form {
+                right: 12px;
+                width: 74%;
+                left: 0;
+            }
+            fieldset,select,option {
+    display: inline-block;
+    width: 241px;
+    height: 260px;
+}
+        }
+        @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #survey-form {
+    right: -60px;
+    background-color: #fff;
+    width: 74%;
+    padding: 60px;
+    position: relative;
+    left: 55px;
+    border-radius: 20px;
+    opacity: 1.7;
+    height: 100%;
+}
+}
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #survey-form {
+    right: -60px;
+    background-color: #fff;
+    width: 74%;
+    padding: 60px;
+    position: relative;
+    left: 82px;
+    border-radius: 20px;
+    opacity: 1.7;
+    height: 100%;
+}
+}
+    </style>
+</head>
+
+<body class="bg">
+    <!--header section-->
+    <section class="header-sections">
+        <header class="header-section">
+            <img src="images/logo.png" class="logo">
+            <h1 class="heading"> Survey</h1>
+            <p class="description">Thank you for taking the time to answer these questions.<br>The following questions
+                are about to know how well known and successful is Natural Soap</p>
+        </header>
+    </section>
+    <!--end of header section-->
+    <!--Section for form-->
+    <section id="survey-form">
+        <form>
+            <div class="form-group-item">
+                <label for="name" id="name-label">Name</label>
+                <input type="name" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group-item">
+                <label for="email" id="email-label">Email</label>
+                <input type="number-label" id="email" placeholder="Enter your Email Address" required>
+            </div>
+            <div class="form-group-item">
+                <label for="number" id="email-label">Contact Number</label>
+                <input type="number" id="number" placeholder="Enter your Number">
+            </div>
+            <div class="form-group-item">
+                <label id="role-label">Which fragrance u prefer?</label>
+                <select name="role" id="dropdown" class="drpodown-list">
+                    <option value="Graphic Designer">Select your fragrance</option>
+                    <option value="Graphic Designer">Jasmine</option>
+                    <option value="Back End Developer">Lavender</option>
+                    <option value="Front End Developer">Rose water</option>
+                </select>
+            </div>
+            <div class="form-group-item">
+                <fieldset>
+                    <legend>Have you ever used homemade soap?</legend>
+                    <label for="yes" id="email-label" class="label-heading">Yes</label>
+                    <input type="radio" name="interest" value="Yes">
+                    <label for="no" id="email-label" class="label-heading">No</label>
+                    <input type="radio" name="interest" value="No">
+                </fieldset>
+            </div>
+            <div class="form-group-item">
+                <!--Checkbox-->
+                <fieldset>
+                    <legend>Which fragrance u prefer?</legend>
+                    <label for="no" id="email-label" class="label-heading">Jasmine</label>
+                    <input type="checkbox" name="career" value="Accounting">
+                    <label for="no" id="email-label" class="label-heading">Lavender</label>
+                    <input type="checkbox" name="career" value="Teacher">
+                    <label for="no" id="email-label" class="label-heading">Rose water</label>
+                    <input type="checkbox" name="career" value="Engineering">
+                    <label for="no" id="email-label" class="label-heading">Coconut</label>
+                    <input type="checkbox" name="career" value="Other">
+                </fieldset>
+            </div>
+            <div class="form-group-item">
+                <textarea id="comment" class="input-textarea" placeholder="Enter your comment"></textarea>
+            </div>
+            <div class="form-group-item">
+                <button id="submit">Submit</button>
+            </div>
+        </form>
+        </form>
+    </section>
+    <!--End of section for a form-->
+</body>
+
+</html>
